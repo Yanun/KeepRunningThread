@@ -36,7 +36,7 @@ class KeepRunningThread: NSObject {
     
     deinit {
         stop()
-        debugPrint("KeepRunningThread", #function)
+//        debugPrint("KeepRunningThread", #function)
     }
     
     @objc private func _execute(_ task: ThreadTask) {
