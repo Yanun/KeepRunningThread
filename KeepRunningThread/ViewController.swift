@@ -17,10 +17,6 @@ class ViewController: UIViewController {
         
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        longLiveThread = nil
-    }
-    
     @IBAction func start(_ sender: Any) {
         print(" 开启线程")
         longLiveThread = KeepRunningThread()
@@ -36,6 +32,7 @@ class ViewController: UIViewController {
     @IBAction func stop(_ sender: Any) {
         print(" 终止线程")
         longLiveThread?.stop()
+        longLiveThread = nil
     }
     
 }
